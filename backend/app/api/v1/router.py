@@ -1,0 +1,15 @@
+from fastapi import APIRouter
+from app.api.v1 import health, sources, auth, profile, schemes, eligibility, documents, assistant, applications, admin
+
+
+router = APIRouter()
+router.include_router(health.router)
+router.include_router(sources.router)
+router.include_router(auth.router)
+router.include_router(profile.router)
+router.include_router(schemes.router)
+router.include_router(eligibility.router)
+router.include_router(documents.router)
+router.include_router(assistant.router)
+router.include_router(applications.router)
+router.include_router(admin.router)
